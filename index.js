@@ -29,7 +29,7 @@
 
 const takeANumber = (deli,string) => {
   deli.push(string);
-  return `Welcome, ${string}. You are number ${deli.indexOf(string)} in line.`
+  return `Welcome, ${string}. You are number ${deli.indexOf(string) + 1} in line.`
 }
 
 //   describe('nowServing', () => {
