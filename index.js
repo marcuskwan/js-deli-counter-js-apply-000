@@ -28,8 +28,8 @@
 //   });
 
 const takeANumber = (deli,string) => {
-  let array = [];
-  
+  deli.push(string);
+  return `Welcome, ${string}. You are number ${deli.indexOf(string)} in line.`
 }
 
 //   describe('nowServing', () => {
@@ -44,6 +44,11 @@ const takeANumber = (deli,string) => {
 //     });
 //   });
 
+const nowServing = arr => {
+  if (arr.length === 0) return "There is nobody waiting to be served!";
+  return `Currently serving ${arr.shift()}`
+}
+
 //   describe('currentLine(line)', () => {
 //     it('returns "The line is currently empty." if no one is in line', () => {
 //       expect(currentLine([])).toEqual("The line is currently empty.");
@@ -54,3 +59,9 @@ const takeANumber = (deli,string) => {
 //     });
 //   });
 // })
+
+const currentLine = line => {
+  if (line.length === 0) return "The line is currently empty.";
+  let arr = line.map((person,index)=> `${index + 1}.${person}`)
+  return `The line is currently: ` + arr.join(",")
+}
