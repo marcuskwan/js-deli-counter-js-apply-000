@@ -63,5 +63,5 @@ const nowServing = arr => {
 const currentLine = line => {
   if (line.length === 0) return "The line is currently empty.";
   let arr = line.map((person,index)=> `${index+1}. ${person}`)
-  return `The line is currently: ` + arr.join(",")
+  return `The line is currently: ` + arr.join(", ")
 }
